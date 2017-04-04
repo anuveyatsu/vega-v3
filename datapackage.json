@@ -1,6 +1,6 @@
 {
   "name": "barley",
-  "title": "Yields of Barely",
+  "title": "Yields of Barley",
   "sources": [{
     "name": "vega-datasets",
     "web": "https://github.com/vega/vega-datasets"
