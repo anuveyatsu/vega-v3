@@ -1,6 +1,6 @@
 {
   "name": "barley",
-  "title": "Based on the Trellis Display by Becker et al.",
+  "title": "Yields of Barely",
   "sources": [{
     "name": "vega-datasets",
     "web": "https://github.com/vega/vega-datasets"
