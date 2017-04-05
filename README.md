@@ -8,8 +8,7 @@ To create graphs for your tabular DataPackage, the datapackage.json should inclu
 
 <script src="https://gist.github.com/anuveyatsu/4b18a92b7ad805a4459702cf2cba02d4.js"></script>
 
-To use "Vega Graph Specification" `specType` inside `views` attribute should be set to `vega` - line 39. 
-You can use almost the same specifications inside `spec` attribute, that are used for setting the vega graphs. 
+To use "Vega Graph Specification" `specType` inside `views` attribute should be set to `vega` - line 37. You can use almost the same specifications inside `spec` attribute, that are used for setting the vega graphs. Only difference is that in `data` property, all `url` and `path` attributes are moved out. Instead of that, `source` attribute is used to reference a dataset - line 44.
 
 Outside of `spec` attribute there are some other important parameters to note:
 
