@@ -9,6 +9,7 @@
     {
       "name": "barley",
       "path": "data/barley.csv",
+      "format": "csv",
       "schema": {
         "fields": [
           {
