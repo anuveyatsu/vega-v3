@@ -35,14 +35,14 @@
   "views": [
     {
       "title": "DEMO Vega dp view",
+      "resources": [0],
       "specType": "vega",
       "spec": {
         "width": 200,
         "height": 720,
         "data": [
           {
-            "name": "barley",
-            "source": "barley"
+            "name": "barley"
           }
         ],
         "scales": [
