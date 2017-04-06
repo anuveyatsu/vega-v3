@@ -1,5 +1,5 @@
 {
-  "name": "barley",
+  "name": "vega-barley",
   "title": "Yields of Barley",
   "sources": [{
     "name": "vega-datasets",
