@@ -72,3 +72,4 @@ Outside of `spec` attribute there are some other important parameters to note:
 [vega]: https://vega.github.io/vega/
 [trellis]: http://www.jstor.org/stable/1390777
 [editor]: https://vega.github.io/vega-editor/?mode=vega&spec=barley
+[datapackage.json]: http://specs.frictionlessdata.io/data-package/#specification
