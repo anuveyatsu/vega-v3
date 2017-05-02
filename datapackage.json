@@ -1,6 +1,6 @@
 {
-  "name": "vega-barley",
-  "title": "Yields of Barley",
+  "name": "vega-views-tutorial-grouping",
+  "title": "Vega Graph Spec Tutorial - Yields of Barley",
   "sources": [{
     "name": "vega-datasets",
     "web": "https://github.com/vega/vega-datasets"
@@ -34,8 +34,8 @@
   ],
   "views": [
     {
-      "title": "DEMO Vega dp view",
-      "resources": [0],
+      "title": "DEMO Vega spec view",
+      "resources": ["barley"],
       "specType": "vega",
       "spec": {
         "width": 200,

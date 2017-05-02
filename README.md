@@ -1,14 +1,39 @@
-Yields of Barley Based on the [Trellis Display](http://www.jstor.org/stable/1390777) by Becker et al. This is an example DataPackage that demonstrates usage of "Vega Graph Specifications". This DataPackage is based on this [Vega example](http://vega.github.io/vega-editor/?mode=vega&spec=barley/).
+This is an example Data Package, that demonstrates how to build the awesome visualizations using the "Vega Graph Spec". We are using Yields of Barley Based on the [Trellis Display][trellis] - one of the examples from [vega editor][editor] - and displaying it here, on DataHub with slightest modifications in vega-spec.
+
+. This is an example DataPackage that demonstrates usage of "Vega Graph Specifications". This DataPackage is based on this [Vega example](http://vega.github.io/vega-editor/?mode=vega&spec=barley/).
+
 
 ## Views
 
-To create graphs for your tabular DataPackage, the datapackage.json should include the views attribute that defines data views.
+We assume that you are familiar with what [datapackage.json][datapackage.json] is and it's specifications.
+
+To create graphs for your tabular Data Package, the `datapackage.json` should include the `views` attribute that is responsible for visualizations.
+
+If you are familiar with [Vega][vega] specifications, you would probably like to use all it's futures and display you data with desired visualizations in a Vega way. To use it, inside `views` you should set `specType` to "vega" and define some graph specifications in `spec`. See example datapackage.json:
 
 ### Vega Graph Specifications
 
-<script src="https://gist.github.com/anuveyatsu/4b18a92b7ad805a4459702cf2cba02d4.js"></script>
+{{ datapackage.json }}
 
-To use "Vega Graph Specification" `specType` inside `views` attribute should be set to `vega` - line 39. You can use almost the same specifications inside `spec` attribute, that are used for setting the vega graphs. Only difference is that in `data` property, all `url` and `path` attributes are moved out. Instead of that, `name` attribute is used to reference a dataset - line 45.
+<br>
+
+You can use almost the same specifications inside `spec` attribute, that are used for setting the vega graphs. Only difference is that in `data` property, `url` and `path` attributes are moved out.
+
+```
+  ...
+  "spec": {
+    ...
+    "data": [
+      {
+        "name": "barley"
+      }
+      ...
+    ]
+    ...
+  }
+```
+
+Instead we use `name` attribute to reference to a dataset. Note, how we created a new object inside `data` property - `{"name": "barley"}` to reference it to resources (this name is identical to resource name)
 
 Outside of `spec` attribute there are some other important parameters to note:
 
@@ -43,3 +68,7 @@ Outside of `spec` attribute there are some other important parameters to note:
     </tr>
   </tbody>
 </table>
+
+[vega]: https://vega.github.io/vega/
+[trellis]: http://www.jstor.org/stable/1390777
+[editor]: https://vega.github.io/vega-editor/?mode=vega&spec=barley
