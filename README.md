@@ -1,8 +1,5 @@
 This is an example Data Package, that demonstrates how to build the awesome visualizations using the "Vega Graph Spec". We are using Yields of Barley Based on the [Trellis Display][trellis] - one of the examples from [vega editor][editor] - and displaying it here, on DataHub with slightest modifications in vega-spec.
 
-. This is an example DataPackage that demonstrates usage of "Vega Graph Specifications". This DataPackage is based on this [Vega example](http://vega.github.io/vega-editor/?mode=vega&spec=barley/).
-
-
 ## Views
 
 We assume that you are familiar with what [datapackage.json][datapackage.json] is and it's specifications.
