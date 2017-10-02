@@ -1,10 +1,13 @@
 {
   "name": "vega-views-tutorial-grouping",
   "title": "Vega Graph Spec Tutorial - Yields of Barley",
-  "sources": [{
-    "name": "vega-datasets",
-    "web": "https://github.com/vega/vega-datasets"
-  }],
+  "sources": [
+    {
+      "name": "vega-datasets",
+      "web": "https://github.com/vega/vega-datasets",
+      "title": "vega-datasets"
+    }
+  ],
   "resources": [
     {
       "name": "barley",
@@ -35,7 +38,9 @@
   "views": [
     {
       "title": "DEMO Vega spec view",
-      "resources": ["barley"],
+      "resources": [
+        "barley"
+      ],
       "specType": "vega",
       "spec": {
         "width": 200,
@@ -52,8 +57,12 @@
             "range": "height",
             "padding": 0.15,
             "domain": {
-              "data": "barley", "field": "site",
-              "sort": {"field": "yield", "op": "median"}
+              "data": "barley",
+              "field": "site",
+              "sort": {
+                "field": "yield",
+                "op": "median"
+              }
             },
             "reverse": true
           },
@@ -62,20 +71,32 @@
             "type": "linear",
             "nice": true,
             "range": "width",
-            "domain": {"data": "barley", "field": "yield"}
+            "domain": {
+              "data": "barley",
+              "field": "yield"
+            }
           },
           {
             "name": "c",
             "type": "ordinal",
             "range": "category10",
-            "domain": {"data": "barley", "field": "year"}
+            "domain": {
+              "data": "barley",
+              "field": "year"
+            }
           }
         ],
         "axes": [
-          {"type": "x", "scale": "x"}
+          {
+            "type": "x",
+            "scale": "x"
+          }
         ],
         "legends": [
-          {"fill": "c", "title": "year"}
+          {
+            "fill": "c",
+            "title": "year"
+          }
         ],
         "marks": [
           {
@@ -83,7 +104,14 @@
             "type": "group",
             "from": {
               "data": "barley",
-              "transform": [{"type": "facet", "groupby": ["site"]}]
+              "transform": [
+                {
+                  "type": "facet",
+                  "groupby": [
+                    "site"
+                  ]
+                }
+              ]
             },
             "scales": [
               {
@@ -93,8 +121,12 @@
                 "points": true,
                 "padding": 1.2,
                 "domain": {
-                  "data": "barley", "field": "variety",
-                  "sort": {"field": "yield", "op": "median"}
+                  "data": "barley",
+                  "field": "variety",
+                  "sort": {
+                    "field": "yield",
+                    "op": "median"
+                  }
                 },
                 "reverse": true
               }
@@ -104,16 +136,36 @@
                 "type": "y",
                 "scale": "y",
                 "tickSize": 0,
-                "properties": {"axis": {"stroke": {"value": "transparent"}}}
+                "properties": {
+                  "axis": {
+                    "stroke": {
+                      "value": "transparent"
+                    }
+                  }
+                }
               }
             ],
             "properties": {
               "enter": {
-                "x": {"value": 0.5},
-                "y": {"scale": "g", "field": "key"},
-                "height": {"scale": "g", "band": true},
-                "width": {"field": {"group": "width"}},
-                "stroke": {"value": "#ccc"}
+                "x": {
+                  "value": 0.5
+                },
+                "y": {
+                  "scale": "g",
+                  "field": "key"
+                },
+                "height": {
+                  "scale": "g",
+                  "band": true
+                },
+                "width": {
+                  "field": {
+                    "group": "width"
+                  }
+                },
+                "stroke": {
+                  "value": "#ccc"
+                }
               }
             },
             "marks": [
@@ -121,12 +173,27 @@
                 "type": "symbol",
                 "properties": {
                   "enter": {
-                    "x": {"scale": "x", "field": "yield"},
-                    "y": {"scale": "y", "field": "variety"},
-                    "size": {"value": 50},
-                    "stroke": {"scale": "c", "field": "year"},
-                    "strokeWidth": {"value": 2},
-                    "fill": {"value": "transparent"}
+                    "x": {
+                      "scale": "x",
+                      "field": "yield"
+                    },
+                    "y": {
+                      "scale": "y",
+                      "field": "variety"
+                    },
+                    "size": {
+                      "value": 50
+                    },
+                    "stroke": {
+                      "scale": "c",
+                      "field": "year"
+                    },
+                    "strokeWidth": {
+                      "value": 2
+                    },
+                    "fill": {
+                      "value": "transparent"
+                    }
                   }
                 }
               }
@@ -134,16 +201,36 @@
           },
           {
             "type": "text",
-            "from": {"mark": "sites"},
+            "from": {
+              "mark": "sites"
+            },
             "properties": {
               "enter": {
-                "x": {"field": {"group": "width"}, "mult": 0.5},
-                "y": {"field": "y", "offset": -2},
-                "fontWeight": {"value": "bold"},
-                "text": {"field": "datum.site"},
-                "align": {"value": "center"},
-                "baseline": {"value": "bottom"},
-                "fill": {"value": "#000"}
+                "x": {
+                  "field": {
+                    "group": "width"
+                  },
+                  "mult": 0.5
+                },
+                "y": {
+                  "field": "y",
+                  "offset": -2
+                },
+                "fontWeight": {
+                  "value": "bold"
+                },
+                "text": {
+                  "field": "datum.site"
+                },
+                "align": {
+                  "value": "center"
+                },
+                "baseline": {
+                  "value": "bottom"
+                },
+                "fill": {
+                  "value": "#000"
+                }
               }
             }
           }
